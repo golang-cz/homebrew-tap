@@ -5,40 +5,40 @@
 class Go2webrpc < Formula
   desc "go2webrpc, Golang interface as your schema for client/server communication"
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.3/go2webrpc.darwin-amd64"
-      sha256 "fd3652071275349d30effd6aaa23ee5290c685983d81fd0e8f18590d5e173c5b"
-
-      def install
-        bin.install "go2webrpc.darwin-amd64" => "go2webrpc"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.3/go2webrpc.darwin-arm64"
-      sha256 "5e98aeb15c33db94bc5fcddc7fc0ef737366d97990bf7f3a12640d882553dcbd"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.4/go2webrpc.darwin-arm64"
+      sha256 "fef5b05deb5cc02be928286071b38eb26ffd938df5d5baca1af0acde54050493"
 
       def install
         bin.install "go2webrpc.darwin-arm64" => "go2webrpc"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.4/go2webrpc.darwin-amd64"
+      sha256 "9064d575fa1c8d3268670d5e81c5305ec97b1957ed14f13b4e99855bd2ffaede"
+
+      def install
+        bin.install "go2webrpc.darwin-amd64" => "go2webrpc"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.3/go2webrpc.linux-amd64"
-      sha256 "e7b574cf1184a29a9495786d9b0355beb03084a0602c97358bc71c0f75aea40b"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.4/go2webrpc.linux-amd64"
+      sha256 "2e3dbe5388f3f8c1a91e7151d862a06cd8d5d3154cf8f04c270eb3ea646e8a58"
 
       def install
         bin.install "go2webrpc.linux-amd64" => "go2webrpc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.3/go2webrpc.linux-arm64"
-      sha256 "dffec1efec97306dd3cba8115f8be5f204fecd61ca54054b193845d9274df8a6"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.4/go2webrpc.linux-arm64"
+      sha256 "3ac984d41e6309c6ba53ab1163708a9884e8e861b13c9f11ed7c9e1ad9e35444"
 
       def install
         bin.install "go2webrpc.linux-arm64" => "go2webrpc"
