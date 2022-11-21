@@ -5,21 +5,21 @@
 class Go2webrpc < Formula
   desc "go2webrpc, Golang interface as your schema for client/server communication"
   homepage ""
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.5/go2webrpc.darwin-arm64"
-      sha256 "e7f9f51cede3359586b619621ba2998eed84bb575dc0101d1c13faff7cfbdf88"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.6/go2webrpc.darwin-arm64"
+      sha256 "b5f3e049a41e6f900ada465e7564b84b07e2dce980bf028d0693a87ebbed536f"
 
       def install
         bin.install "go2webrpc.darwin-arm64" => "go2webrpc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.5/go2webrpc.darwin-amd64"
-      sha256 "a437dd1323a9bd4687470637b5297b6bd358333292c10792c3cce50045281771"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.6/go2webrpc.darwin-amd64"
+      sha256 "b3ce64ce4eea03fd66799b27ca6b26fdc49b7d8848053e70f9fea716bd4b5a12"
 
       def install
         bin.install "go2webrpc.darwin-amd64" => "go2webrpc"
@@ -29,16 +29,16 @@ class Go2webrpc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.5/go2webrpc.linux-amd64"
-      sha256 "b3663150579620f617469b4f21dd42233e2f3aaa325f98ef8a87a104bde59acc"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.6/go2webrpc.linux-amd64"
+      sha256 "8649e846c943f8f125888ab072ec0c2ac1c5f2a355ac3e0979e5bdb50a4d9f6e"
 
       def install
         bin.install "go2webrpc.linux-amd64" => "go2webrpc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.5/go2webrpc.linux-arm64"
-      sha256 "0189f358f08b17df8670143a196786872847e8a5c4f1a51308fc62da353c38b0"
+      url "https://github.com/golang-cz/go2webrpc/releases/download/v0.0.6/go2webrpc.linux-arm64"
+      sha256 "e9f11c9f7e06a751de97caaa3878e2c63f86645620b860c8e05181a7d71577dd"
 
       def install
         bin.install "go2webrpc.linux-arm64" => "go2webrpc"
