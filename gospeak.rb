@@ -5,21 +5,21 @@
 class Gospeak < Formula
   desc "gospeak, Golang interface as your schema for client/server communication"
   homepage ""
-  version "0.0.11"
+  version "0.0.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.11/gospeak.darwin-arm64"
-      sha256 "45904f5cf04fc65d313651854ad6e4df0d5f80b17bb220eff1d5cd6f52365270"
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.12/gospeak.darwin-arm64"
+      sha256 "c2ded351c2a3937721072a710de6120a0bd9239b9e12540b3305c9bf35ae5e15"
 
       def install
         bin.install "gospeak.darwin-arm64" => "gospeak"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.11/gospeak.darwin-amd64"
-      sha256 "7e347fd99728d93c7c2b432709d69a1c0e212e109da5127bc2274030bf4eeaec"
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.12/gospeak.darwin-amd64"
+      sha256 "566b2f972e9b20edb748334a665ee08aef5464e5d1e0628cf7a69e28f3341d27"
 
       def install
         bin.install "gospeak.darwin-amd64" => "gospeak"
@@ -28,20 +28,20 @@ class Gospeak < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.11/gospeak.linux-arm64"
-      sha256 "ca59a63f3d5a4cc1f492974bb9ad2ad8bd4e43e37791897811c702d71e917045"
-
-      def install
-        bin.install "gospeak.linux-arm64" => "gospeak"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.11/gospeak.linux-amd64"
-      sha256 "42fa1c3f437d902e382b47aff7d258c50dcabe202d9b23d756c0019a355d92c5"
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.12/gospeak.linux-amd64"
+      sha256 "5063852f28a4b48287a59d6642bbcbf17059cb99b40d497c353cdd878ade4309"
 
       def install
         bin.install "gospeak.linux-amd64" => "gospeak"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.0.12/gospeak.linux-arm64"
+      sha256 "fcaa97f8db308acd595fdbf9bd9c44aa81e5f8cf0b0b94e2b7d10d78c5851d31"
+
+      def install
+        bin.install "gospeak.linux-arm64" => "gospeak"
       end
     end
   end
