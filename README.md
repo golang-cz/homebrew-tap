@@ -4,7 +4,7 @@ Homebrew formulae that allows installation of Golang.cz tools through the Homebr
 
 ```
 brew tap golang-cz/tap
-brew install go2webrpc
+brew install gospeak
 ```
 
 # License
