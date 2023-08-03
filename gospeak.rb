@@ -5,21 +5,21 @@
 class Gospeak < Formula
   desc "gospeak, Golang interface as your schema for client/server communication"
   homepage ""
-  version "0.2.2"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.2.2/gospeak.darwin-amd64"
-      sha256 "7d94899b17c7113f6ebb5f3204a1794668bf1f68e76e2ad10a231930c6fde975"
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.3.0/gospeak.darwin-amd64"
+      sha256 "7f7199a06de609d5cfa8759b16b6b7ba1d644cc24a093b636513d2311ffcf721"
 
       def install
         bin.install "gospeak.darwin-amd64" => "gospeak"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.2.2/gospeak.darwin-arm64"
-      sha256 "bdb72348f3288cc2d55c38f57763c5e67ef472a441351b284f9c0de66a52aaac"
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.3.0/gospeak.darwin-arm64"
+      sha256 "33e0ca691e5db19ffc74eda5087c78c819ad28bf261972f2cdfa24f8ba628de4"
 
       def install
         bin.install "gospeak.darwin-arm64" => "gospeak"
@@ -28,20 +28,20 @@ class Gospeak < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.2.2/gospeak.linux-amd64"
-      sha256 "fdddf393291aad65544f717d2edd9e2a9d615f797285159e9ae560096aa87c06"
-
-      def install
-        bin.install "gospeak.linux-amd64" => "gospeak"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-cz/gospeak/releases/download/v0.2.2/gospeak.linux-arm64"
-      sha256 "9163f77d7450585120d9916dd6fbafc80ed0eb265e479527c2f8d4835ed1d48d"
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.3.0/gospeak.linux-arm64"
+      sha256 "3d01653aac0ac03964250ebb91d7c65c7b9c86f28910676d523a6ca596bc2694"
 
       def install
         bin.install "gospeak.linux-arm64" => "gospeak"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/golang-cz/gospeak/releases/download/v0.3.0/gospeak.linux-amd64"
+      sha256 "4852feb6021f5e3708f5162546ad5beea7484a7cf4857c5c13ee60fa0f6ba31d"
+
+      def install
+        bin.install "gospeak.linux-amd64" => "gospeak"
       end
     end
   end
