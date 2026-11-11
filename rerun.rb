@@ -5,21 +5,21 @@
 class Rerun < Formula
   desc "re-run a command on file system changes"
   homepage "https://github.com/golang-cz/rerun"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/golang-cz/rerun/releases/download/v0.4.0/rerun.darwin-amd64"
-      sha256 "27386dcd17d1e6ebd6f50aba08c9d4f389aa96fd5be7e9433595d22d09a0bb50"
+      url "https://github.com/golang-cz/rerun/releases/download/v0.4.1/rerun.darwin-amd64"
+      sha256 "73c0f978373e702af8ab8a5faf21f2594e402639dbb03954a7a231607b055647"
 
       define_method(:install) do
         bin.install "rerun.darwin-amd64" => "rerun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/golang-cz/rerun/releases/download/v0.4.0/rerun.darwin-arm64"
-      sha256 "154a00e52a1730ba3c3f7facb4a5f3ce1e87537bdd546e595a6fc4599722d3d2"
+      url "https://github.com/golang-cz/rerun/releases/download/v0.4.1/rerun.darwin-arm64"
+      sha256 "6df96a863f05b00bff623f92700d0343c0fff424a00c8f0adb814ee22668eddb"
 
       define_method(:install) do
         bin.install "rerun.darwin-arm64" => "rerun"
@@ -29,15 +29,15 @@ class Rerun < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-cz/rerun/releases/download/v0.4.0/rerun.linux-amd64"
-      sha256 "c88907dba933eda09d1c4deac629862a1eec2cd9cc7ad8de993f623b5ca7fd2e"
+      url "https://github.com/golang-cz/rerun/releases/download/v0.4.1/rerun.linux-amd64"
+      sha256 "fe6a83f6e0654c7198c06204e9184f6baa4141d72bbb8e9b1f0c11aabd2eb8f8"
       define_method(:install) do
         bin.install "rerun.linux-amd64" => "rerun"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-cz/rerun/releases/download/v0.4.0/rerun.linux-arm64"
-      sha256 "7e0efa0755d7e23aacb970c3d4d7e5da4badc961902f7342937626ccf42ae6c1"
+      url "https://github.com/golang-cz/rerun/releases/download/v0.4.1/rerun.linux-arm64"
+      sha256 "41006120092f3aeeed19a304725dc96664605f9e9678a3c654362db3b609d6bd"
       define_method(:install) do
         bin.install "rerun.linux-arm64" => "rerun"
       end
